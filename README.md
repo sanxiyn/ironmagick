@@ -8,8 +8,10 @@ Compare [RMagick4J](http://kenai.com/projects/rmagick4j) which does
 the same for JRuby.
 
 Current development is focused on running
-[Gruff](http://nubyonrails.com/pages/gruff/) which depends on RMagick.
+[Gruff](http://nubyonrails.com/pages/gruff/) and
+[Sparklines](http://nubyonrails.com/pages/sparklines/)
+which depends on RMagick.
 You are welcomed to contribute parts of RMagick you need, but is not
-excercised by Gruff.
+excercised by these libraries.
 
 Thanks!
