@@ -8,7 +8,7 @@ module Magick
 
     @@drawing_primitives = %w(
       fill stroke stroke_antialias stroke_opacity stroke_width
-      circle line rectangle scale
+      circle ellipse line rectangle scale
     )
 
     def method_missing(method, *args)
@@ -46,6 +46,13 @@ module Magick
           end
           r = x1-x2
           rectangle = Rectangle.new(x1-r, y1-r, r+r, r+r)
+          graphics.fill_ellipse(brush, rectangle)
+        when "ellipse"
+          x, y, w, h, s, e = args
+          if s != 0 or e != 360
+            raise "Complete ellipses only for now"
+          end
+          rectangle = Rectangle.new(x, y, w, h)
           graphics.fill_ellipse(brush, rectangle)
         when "rectangle"
           x1, y1, x2, y2 = args

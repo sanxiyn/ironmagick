@@ -30,4 +30,12 @@ module Magick
   end
 
   TypeMetric = Struct.new("TypeMetric", :width, :height)
+
+  class Image
+    def format=(format)
+      if format != 'PNG'
+        raise "PNG only for now"
+      end
+    end
+  end
 end
